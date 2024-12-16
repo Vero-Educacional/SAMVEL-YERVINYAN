@@ -1,0 +1,598 @@
+/* FUENTES */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+/* GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: white;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* VARIABLES */
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #000000;
+}
+
+.logo {
+  width: 4rem;
+}
+.logo:hover {
+  filter: invert(56%) sepia(96%) saturate(611%) hue-rotate(359deg) brightness(130%) contrast(105%);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+}
+.nav-list li:hover {
+  transform: scale(1.1);
+}
+.nav-list a:hover {
+  color: #ffa600;
+}
+
+.abrir-menu {
+  display: none;
+}
+
+.cerrar-menu {
+  display: none;
+}
+
+/* INDEX */
+.banner {
+  background-image: url(../img/banner.png);
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 0.5rem;
+  grid-area: "banner";
+}
+
+.subtitulo {
+  font-weight: normal;
+  font-size: 2.8rem;
+}
+
+.titulo {
+  font-size: 5.2rem;
+}
+
+.lema {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 2.6rem;
+}
+
+.Niveles {
+  display: grid;
+  grid-template-areas: "Caja1 Caja2 Caja3";
+  color: white;
+  padding: 3rem;
+  background-color: #000000;
+}
+
+.Caja1 {
+  background-image: url(../img/caja1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  grid-area: "Caja3";
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  letter-spacing: 0.2rem;
+  padding: 1.5rem;
+}
+.Caja1:hover {
+  background-image: url(../img/caja1des.png);
+  transform: scale(1.1);
+  color: #ffa600;
+}
+
+.Caja2 {
+  background-image: url(../img/caja2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  grid-area: "Caja3";
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  letter-spacing: 0.2rem;
+  padding: 1.5rem;
+}
+.Caja2:hover {
+  background-image: url(../img/caja2des.png);
+  transform: scale(1.1);
+  color: #ffa600;
+}
+
+.Caja3 {
+  background-image: url(../img/caja3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  grid-area: "Caja3";
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  letter-spacing: 0.2rem;
+  padding: 1.5rem;
+}
+.Caja3:hover {
+  background-image: url(../img/caja3des.png);
+  transform: scale(1.1);
+  color: #ffa600;
+}
+
+.h4Caja {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.barra {
+  background-image: url(../img/sededes.png);
+  height: 25rem;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.barra h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.barra p {
+  font-size: 1.3rem;
+}
+.barra:hover {
+  background-image: url(../img/sede.png);
+}
+
+.map {
+  width: 80%;
+  height: 8rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* PLANES DE ESTUDIO */
+.planes {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: flex-start;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 4rem;
+  color: white;
+  flex-direction: column;
+  background-image: url(../img/planesback.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.planes h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.nivelP {
+  padding-bottom: 5rem;
+}
+
+.nivelI {
+  padding-bottom: 5rem;
+}
+
+.nivelA {
+  padding-bottom: 5rem;
+}
+
+/* INSCRIPCIONES */
+.inscripcionesBack {
+  background-image: url(../img/inscripcionback.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inscripciones {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 4rem;
+  color: white;
+  text-align: flex-start;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.inscripciones p {
+  padding-top: 1rem;
+}
+
+.titleins {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 4rem;
+}
+
+.botonins {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+}
+.botonins a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.boton1 {
+  background-color: #ffa600;
+  padding: 1rem;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.boton1:hover {
+  background-color: #c58000;
+  font-weight: bold;
+}
+
+/* NUESTRA HISTORIA */
+.contenedorHistoria {
+  display: grid;
+  grid-template-areas: "imgProf nuestraHistoria" "nuestroRef imgSavel";
+  background-color: white;
+}
+
+.contenedorReferente {
+  display: grid;
+  grid-template-areas: "imgProf nuestraHistoria" "nuestroRef imgSavel";
+  background-color: #000000;
+}
+
+.titleHistory {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.imgProf {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: imgProf;
+  align-items: center;
+}
+.imgProf img {
+  height: 25vw;
+  padding: 1rem;
+}
+
+.nuestraHistoria {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-area: nuestraHistoria;
+  padding: 2rem;
+  text-align: justify;
+  justify-content: center;
+  align-items: start;
+}
+.nuestraHistoria h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+.imgSamvel {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: imgSavel;
+  align-items: center;
+}
+.imgSamvel img {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  height: 25vw;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.nuestroRef {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: nuestroRef;
+  flex-direction: column;
+  color: white;
+  text-align: justify;
+  justify-content: center;
+  align-items: start;
+  padding: 3rem;
+}
+.nuestroRef h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+/* FORMULARIO */
+.form {
+  padding: 1.5rem;
+  background-image: url(../img/form.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 2rem;
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.inputForm {
+  border-radius: 0%;
+}
+
+.contact {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.boton {
+  margin-top: 1.5rem;
+  background-color: rgb(95, 95, 95);
+  border: 0px;
+  color: white;
+  border-radius: 0%;
+}
+.boton:hover {
+  background-color: #ffa600;
+  font-weight: bold;
+}
+
+.background-contact {
+  background-color: white;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000000;
+  color: white;
+  align-self: flex-end;
+  width: 100%;
+  height: 10rem;
+}
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.redes li {
+  list-style: none;
+  padding: 1rem;
+}
+.redes li:hover {
+  transform: scale(1.3);
+}
+.redes a {
+  color: white;
+  font-size: 1.7rem;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.icoY:hover {
+  color: #ffa600;
+}
+
+.icoF:hover {
+  color: #ffa600;
+}
+
+.icoI:hover {
+  color: #ffa600;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1023px) {
+  .contenedorHistoria {
+    grid-template-areas: "imgProf imgProf " "nuestraHistoria nuestraHistoria" "nuestroRef nuestroRef" "imgSavel imgSavel";
+  }
+  .contenedorReferente {
+    grid-template-areas: "imgProf imgProf " "nuestraHistoria nuestraHistoria" "nuestroRef nuestroRef" "imgSavel imgSavel";
+  }
+  .imgProf {
+    align-items: center;
+    justify-content: center;
+  }
+  .imgProf img {
+    height: 78vw;
+  }
+  .imgSamvel {
+    align-items: center;
+    justify-content: center;
+  }
+  .imgSamvel img {
+    height: 78vw;
+  }
+  .subtitulo {
+    font-size: 1.9rem;
+  }
+  .titulo {
+    font-size: 3.8rem;
+  }
+  .lema {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  .abrir-menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+  }
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0f0f0f;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+  .subtitulo {
+    font-size: 1.7rem;
+  }
+  .titulo {
+    font-size: 3.7rem;
+  }
+  .lema {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .Niveles {
+    display: flex;
+    flex-direction: column;
+  }
+  .subtitulo {
+    font-size: 1.2rem;
+  }
+  .titulo {
+    font-size: 2.8rem;
+  }
+  .lema {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .subtitulo {
+    font-size: 1.2rem;
+  }
+  .titulo {
+    font-size: 2.3rem;
+  }
+  .lema {
+    font-size: 1rem;
+  }
+  .barra h4 {
+    font-size: 1.5rem;
+  }
+  .barra p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 467px) {
+  .nuestraHistoria h4 {
+    font-size: 1.1rem;
+  }
+  .nuestroRef h4 {
+    font-size: 1.1rem;
+  }
+  .subtitulo {
+    font-size: 0.8rem;
+  }
+  .titulo {
+    font-size: 1.7rem;
+  }
+  .lema {
+    font-size: 0.8rem;
+  }
+  .barra h4 {
+    font-size: 1.4rem;
+  }
+  .barra p {
+    font-size: 0.7rem;
+  }
+  .redes a {
+    font-size: 1.3rem;
+  }
+  .copyright {
+    font-size: 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
